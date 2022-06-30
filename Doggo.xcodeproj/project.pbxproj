@@ -17,6 +17,8 @@
 		4ED31F72286D195E00F60CB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F48286D195C00F60CB3 /* ContentView.swift */; };
 		4ED31F73286D195E00F60CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED31F49286D195E00F60CB3 /* Assets.xcassets */; };
 		4ED31F74286D195E00F60CB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED31F49286D195E00F60CB3 /* Assets.xcassets */; };
+		4ED31F85286D1FCC00F60CB3 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F84286D1FCC00F60CB3 /* auth.swift */; };
+		4ED31F86286D1FCC00F60CB3 /* auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F84286D1FCC00F60CB3 /* auth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		4ED31F67286D195E00F60CB3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED31F6B286D195E00F60CB3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		4ED31F6D286D195E00F60CB3 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		4ED31F84286D1FCC00F60CB3 /* auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 		4ED31F46286D195C00F60CB3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4ED31F83286D1FB300F60CB3 /* Api */,
 				4ED31F47286D195C00F60CB3 /* DoggoApp.swift */,
 				4ED31F48286D195C00F60CB3 /* ContentView.swift */,
 				4ED31F49286D195E00F60CB3 /* Assets.xcassets */,
@@ -139,6 +143,14 @@
 				4ED31F6D286D195E00F60CB3 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		4ED31F83286D1FB300F60CB3 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				4ED31F84286D1FCC00F60CB3 /* auth.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F71286D195E00F60CB3 /* ContentView.swift in Sources */,
+				4ED31F85286D1FCC00F60CB3 /* auth.swift in Sources */,
 				4ED31F6F286D195E00F60CB3 /* DoggoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F72286D195E00F60CB3 /* ContentView.swift in Sources */,
+				4ED31F86286D1FCC00F60CB3 /* auth.swift in Sources */,
 				4ED31F70286D195E00F60CB3 /* DoggoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
