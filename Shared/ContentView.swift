@@ -8,52 +8,65 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var joke: String = "…"
-    @State var email = ""
-    @State var password = ""
-    
+    @StateObject private var signInVM = SignInViewModel()
+    @StateObject private var myPetsVM = MyPetsViewModel()
+
     var body: some View {
-        
-        NavigationView {
-            VStack {
-                Image("logo")
-                    .resizable()
-                    .scaleEffect()
-                    .frame(width: 150, height: 150)
-                
-                VStack {
-                    TextField("Email Address", text: $email)
-                        .padding()
-                        .foregroundColor(Color(.label))
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(8)
-                    
-                    SecureField("Password", text: $password)
-                        .padding()
-                        .foregroundColor(Color(.label))
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(8)
-                    
-                    Button(action: {
-                        signIn(username: email, password: password)
-                    }, label: {
-                        Text("Sign in")
-                            .frame(width: 150, height: 50)
-                            .foregroundColor(Color(.label))
-                            .background(Color.accentColor)
-                            .cornerRadius(8)
-                    })
-                    
-                    Text(joke)
-                }
+        VStack {
+            Text("Doggo.Rocks")
+                .font(.title)
+                .fontWeight(.semibold)
                 .padding()
+            
+            Text("Sign in")
+                .font(.headline)
+                .fontWeight(.semibold)
+                .padding()
+            
+            Image("logo")
+                .resizable()
+                .scaleEffect()
+                .frame(width: 150, height: 150)
+            
+            VStack {
+                TextField("Email Address", text: $signInVM.username)
+                .padding()
+                .foregroundColor(Color(.label))
+                .background(Color(.secondarySystemBackground))
+                .cornerRadius(8)
+            
+                SecureField("Password", text: $signInVM.password)
+                    .padding()
+                    .foregroundColor(Color(.label))
+                    .background(Color(.secondarySystemBackground))
+                    .cornerRadius(8)
                 
-                Spacer()
-            }.navigationTitle("Sign in")
-        }
-        
-        Text("Hello, world!")
+                Button(action: {
+                    signInVM.signIn()
+                }, label: {
+                    Text("Sign in")
+                        .frame(width: 150, height: 50)
+                        .foregroundColor(Color(.label))
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                })
+
+                Text(signInVM.isAuthenticated ? "Authenticated" : "Unauthenticated")
+            }
             .padding()
+            
+            Spacer()
+            
+            Button(action: {
+                myPetsVM.getMyPets()
+            }, label: {
+                Text("Get my pets")
+                    .frame(width: 150, height: 50)
+                    .foregroundColor(Color(.label))
+                    .background(Color.accentColor)
+                    .cornerRadius(8)
+            })
+        }
     }
 }
 
