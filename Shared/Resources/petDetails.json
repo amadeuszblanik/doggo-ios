@@ -1,0 +1,304 @@
+[
+  {
+    "id": 2,
+    "name": "Goldie",
+    "kind": "DOG",
+    "breed": "Standard Schnauzer",
+    "microchip": "616093901225585",
+    "birthDate": "2022-12-01T23:00:00.000Z",
+    "isActive": true,
+    "createdAt": "2022-06-25T22:24:59.964Z",
+    "updatedAt": "2022-06-25T22:24:59.964Z",
+    "petUsers": [
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "joe.doe@doggo.rocks",
+          "firstName": "Joe",
+          "lastName": "Doe"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "amadeusz@blanik.me",
+          "firstName": "Amadeusz",
+          "lastName": "Blanik"
+        }
+      },
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "joe.doe666@doggo.rocks",
+          "firstName": "Joe",
+          "lastName": "Doe"
+        }
+      }
+    ],
+    "weight": [
+      {
+        "id": 11,
+        "weight": 0.425,
+        "date": "2022-07-01T17:22:00.000Z",
+        "createdAt": "2022-06-26T17:22:12.388Z",
+        "updatedAt": "2022-06-26T17:22:12.388Z",
+        "unit": "KG"
+      },
+      {
+        "id": 10,
+        "weight": 14.5,
+        "date": "2022-06-30T17:21:48.000Z",
+        "createdAt": "2022-06-26T17:21:59.057Z",
+        "updatedAt": "2022-06-26T17:21:59.057Z",
+        "unit": "KG"
+      },
+      {
+        "id": 8,
+        "weight": 9.85,
+        "date": "2022-06-27T23:25:40.000Z",
+        "createdAt": "2022-06-25T23:39:06.607Z",
+        "updatedAt": "2022-06-26T01:13:16.698Z",
+        "unit": "KG"
+      },
+      {
+        "id": 24,
+        "weight": 10,
+        "date": "2022-06-26T21:50:00.000Z",
+        "createdAt": "2022-06-26T19:48:12.663Z",
+        "updatedAt": "2022-06-26T19:48:12.663Z",
+        "unit": "KG"
+      },
+      {
+        "id": 23,
+        "weight": 999,
+        "date": "2022-06-26T19:50:00.000Z",
+        "createdAt": "2022-06-26T19:45:30.663Z",
+        "updatedAt": "2022-06-26T19:45:30.663Z",
+        "unit": "KG"
+      },
+      {
+        "id": 22,
+        "weight": 999,
+        "date": "2022-06-26T19:49:00.000Z",
+        "createdAt": "2022-06-26T19:45:22.379Z",
+        "updatedAt": "2022-06-26T19:45:22.379Z",
+        "unit": "KG"
+      },
+      {
+        "id": 25,
+        "weight": 100,
+        "date": "2022-06-26T19:49:00.000Z",
+        "createdAt": "2022-06-26T19:49:23.091Z",
+        "updatedAt": "2022-06-26T19:49:23.091Z",
+        "unit": "KG"
+      },
+      {
+        "id": 21,
+        "weight": 999,
+        "date": "2022-06-26T19:45:00.000Z",
+        "createdAt": "2022-06-26T19:45:11.530Z",
+        "updatedAt": "2022-06-26T19:45:11.530Z",
+        "unit": "KG"
+      },
+      {
+        "id": 15,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:08.335Z",
+        "updatedAt": "2022-06-26T19:41:08.335Z",
+        "unit": "KG"
+      },
+      {
+        "id": 16,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:09.282Z",
+        "updatedAt": "2022-06-26T19:41:09.282Z",
+        "unit": "KG"
+      },
+      {
+        "id": 17,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:09.990Z",
+        "updatedAt": "2022-06-26T19:41:09.990Z",
+        "unit": "KG"
+      },
+      {
+        "id": 18,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:10.580Z",
+        "updatedAt": "2022-06-26T19:41:10.580Z",
+        "unit": "KG"
+      },
+      {
+        "id": 19,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:11.093Z",
+        "updatedAt": "2022-06-26T19:41:11.093Z",
+        "unit": "KG"
+      },
+      {
+        "id": 20,
+        "weight": 6.804,
+        "date": "2022-06-26T19:41:00.000Z",
+        "createdAt": "2022-06-26T19:41:11.579Z",
+        "updatedAt": "2022-06-26T19:41:11.579Z",
+        "unit": "KG"
+      },
+      {
+        "id": 13,
+        "weight": 6.804,
+        "date": "2022-06-26T19:40:07.000Z",
+        "createdAt": "2022-06-26T19:40:19.481Z",
+        "updatedAt": "2022-06-26T19:40:19.481Z",
+        "unit": "KG"
+      },
+      {
+        "id": 14,
+        "weight": 6.804,
+        "date": "2022-06-26T19:40:07.000Z",
+        "createdAt": "2022-06-26T19:40:20.163Z",
+        "updatedAt": "2022-06-26T19:40:20.163Z",
+        "unit": "KG"
+      },
+      {
+        "id": 12,
+        "weight": 0.012,
+        "date": "2022-06-26T19:13:30.000Z",
+        "createdAt": "2022-06-26T19:13:50.364Z",
+        "updatedAt": "2022-06-26T19:13:50.364Z",
+        "unit": "KG"
+      },
+      {
+        "id": 9,
+        "weight": 10,
+        "date": "2022-06-26T17:21:13.000Z",
+        "createdAt": "2022-06-26T17:21:15.625Z",
+        "updatedAt": "2022-06-26T17:21:15.625Z",
+        "unit": "KG"
+      },
+      {
+        "id": 6,
+        "weight": 9.85,
+        "date": "2022-06-25T23:25:40.000Z",
+        "createdAt": "2022-06-25T23:38:59.653Z",
+        "updatedAt": "2022-06-26T01:13:16.697Z",
+        "unit": "KG"
+      },
+      {
+        "id": 7,
+        "weight": 9.85,
+        "date": "2022-06-25T23:25:40.000Z",
+        "createdAt": "2022-06-25T23:39:02.134Z",
+        "updatedAt": "2022-06-26T01:13:16.698Z",
+        "unit": "KG"
+      },
+      {
+        "id": 4,
+        "weight": 0.01,
+        "date": "2022-06-25T23:17:07.000Z",
+        "createdAt": "2022-06-25T23:19:24.252Z",
+        "updatedAt": "2022-06-26T01:13:16.697Z",
+        "unit": "KG"
+      },
+      {
+        "id": 5,
+        "weight": 9.85,
+        "date": "2022-06-25T23:17:07.000Z",
+        "createdAt": "2022-06-25T23:23:33.249Z",
+        "updatedAt": "2022-06-26T01:13:16.697Z",
+        "unit": "KG"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Midi",
+    "kind": "DOG",
+    "breed": "Standard Schnauzer",
+    "microchip": "616093901225585",
+    "birthDate": "2022-12-01T23:00:00.000Z",
+    "isActive": true,
+    "createdAt": "2022-06-25T22:23:28.087Z",
+    "updatedAt": "2022-06-25T22:23:28.087Z",
+    "petUsers": [
+      {
+        "role": "OWNER",
+        "user": {
+          "email": "joe.doe@doggo.rocks",
+          "firstName": "Joe",
+          "lastName": "Doe"
+        }
+      }
+    ],
+    "weight": [
+      {
+        "id": 1,
+        "weight": 0.01,
+        "date": "2022-06-25T23:17:07.000Z",
+        "createdAt": "2022-06-25T23:17:15.916Z",
+        "updatedAt": "2022-06-26T01:13:16.675Z",
+        "unit": "KG"
+      },
+      {
+        "id": 2,
+        "weight": 0.01,
+        "date": "2022-06-25T23:17:07.000Z",
+        "createdAt": "2022-06-25T23:18:18.923Z",
+        "updatedAt": "2022-06-26T01:13:16.695Z",
+        "unit": "KG"
+      },
+      {
+        "id": 3,
+        "weight": 0.01,
+        "date": "2022-06-25T23:17:07.000Z",
+        "createdAt": "2022-06-25T23:18:23.084Z",
+        "updatedAt": "2022-06-26T01:13:16.696Z",
+        "unit": "KG"
+      }
+    ]
+  }
+]

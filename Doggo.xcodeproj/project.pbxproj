@@ -23,6 +23,11 @@
 		4E34069328712BBB00102855 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E34069528712BBB00102855 /* Localizable.strings */; };
 		4E34069928712E3D00102855 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34069828712E3D00102855 /* AuthenticationError.swift */; };
 		4E34069A28712E3D00102855 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34069828712E3D00102855 /* AuthenticationError.swift */; };
+		4E3ED2FA287232BF006631E2 /* DogTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3ED2F9287232BF006631E2 /* DogTileView.swift */; };
+		4E3ED2FD2872331E006631E2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3ED2FC2872331E006631E2 /* ModelData.swift */; };
+		4E3ED2FE2872331E006631E2 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3ED2FC2872331E006631E2 /* ModelData.swift */; };
+		4E3ED3052872341A006631E2 /* petDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3ED3042872341A006631E2 /* petDetails.json */; };
+		4E3ED3062872341A006631E2 /* petDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3ED3042872341A006631E2 /* petDetails.json */; };
 		4ED31F60286D195E00F60CB3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F5F286D195E00F60CB3 /* Tests_iOS.swift */; };
 		4ED31F62286D195E00F60CB3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F61286D195E00F60CB3 /* Tests_iOSLaunchTests.swift */; };
 		4ED31F6C286D195E00F60CB3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F6B286D195E00F60CB3 /* Tests_macOS.swift */; };
@@ -69,6 +74,9 @@
 		4E34069628712CE800102855 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4E34069728712CFE00102855 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E34069828712E3D00102855 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		4E3ED2F9287232BF006631E2 /* DogTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTileView.swift; sourceTree = "<group>"; };
+		4E3ED2FC2872331E006631E2 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		4E3ED3042872341A006631E2 /* petDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = petDetails.json; sourceTree = "<group>"; };
 		4ED31F47286D195C00F60CB3 /* DoggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggoApp.swift; sourceTree = "<group>"; };
 		4ED31F48286D195C00F60CB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4ED31F49286D195E00F60CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +147,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		4E3ED2F8287232A6006631E2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4E3ED2F9287232BF006631E2 /* DogTileView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4E3ED2FB28723309006631E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E3ED2FC2872331E006631E2 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E3ED2FF287233B7006631E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E3ED3042872341A006631E2 /* petDetails.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4ED31F41286D195C00F60CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +186,9 @@
 		4ED31F46286D195C00F60CB3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4E3ED2FF287233B7006631E2 /* Resources */,
+				4E3ED2FB28723309006631E2 /* Model */,
+				4E3ED2F8287232A6006631E2 /* Components */,
 				4E34067F2871108F00102855 /* Models */,
 				4E34067B2871102F00102855 /* Screens */,
 				4EEC429B286E43400073B70F /* View Models */,
@@ -347,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F73286D195E00F60CB3 /* Assets.xcassets in Resources */,
+				4E3ED3052872341A006631E2 /* petDetails.json in Resources */,
 				4E34069228712BBB00102855 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F74286D195E00F60CB3 /* Assets.xcassets in Resources */,
+				4E3ED3062872341A006631E2 /* petDetails.json in Resources */,
 				4E34069328712BBB00102855 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +421,7 @@
 				4E3406842871177900102855 /* MyPetsView.swift in Sources */,
 				4E3406812871124500102855 /* Authentication.swift in Sources */,
 				4E34067D2871104B00102855 /* SignInView.swift in Sources */,
+				4E3ED2FA287232BF006631E2 /* DogTileView.swift in Sources */,
 				4EEC429D286E43520073B70F /* SignInViewModel.swift in Sources */,
 				4ED31F71286D195E00F60CB3 /* ContentView.swift in Sources */,
 				4E34068A28711D4100102855 /* PetDetailsView.swift in Sources */,
@@ -392,6 +430,7 @@
 				4E34068728711C3000102855 /* PetSingle.swift in Sources */,
 				4EEC42A3286E51E90073B70F /* MyPetsViewModel.swift in Sources */,
 				4E34069928712E3D00102855 /* AuthenticationError.swift in Sources */,
+				4E3ED2FD2872331E006631E2 /* ModelData.swift in Sources */,
 				4E34068D2871298A00102855 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3406852871177900102855 /* MyPetsView.swift in Sources */,
+				4E3ED2FE2872331E006631E2 /* ModelData.swift in Sources */,
 				4E3406822871124500102855 /* Authentication.swift in Sources */,
 				4E34067E2871104B00102855 /* SignInView.swift in Sources */,
 				4EEC429E286E43520073B70F /* SignInViewModel.swift in Sources */,

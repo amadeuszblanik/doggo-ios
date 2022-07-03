@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MyPetsView: View {
     @ObservedObject var myPetsVM = MyPetsViewModel()
-    
+
     var body: some View {
         NavigationView {
-            List(myPetsVM.petsList) { pet in
+            List(petsList) { pet in
                 VStack {
                     NavigationLink(destination: PetDetailsView(details: pet)) {
                         Text(pet.name)
