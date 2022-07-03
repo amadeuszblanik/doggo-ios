@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct DoggoApp: App {
+    @StateObject var authentication = Authentication()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authentication.isAuthenticated {
+                ContentView()
+                    .environmentObject(authentication)
+            } else {
+                SignInView()
+                    .environmentObject(authentication)
+            }
         }
     }
 }

@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
-//  Shared
+//  SignInView.swift
+//  Doggo
 //
-//  Created by Amadeusz Blanik on 30/06/2022.
+//  Created by Amadeusz Blanik on 03/07/2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignInView: View {
     @StateObject private var signInVM = SignInViewModel()
-    @StateObject private var myPetsVM = MyPetsViewModel()
-
+    @EnvironmentObject var authentication: Authentication
+    
     var body: some View {
         VStack {
             Text("Doggo.Rocks")
@@ -34,6 +34,7 @@ struct ContentView: View {
                 .foregroundColor(Color(.label))
                 .background(Color(.secondarySystemBackground))
                 .cornerRadius(8)
+                .keyboardType(.emailAddress)
             
                 SecureField("Password", text: $signInVM.password)
                     .padding()
@@ -41,43 +42,33 @@ struct ContentView: View {
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(8)
                 
-                Button(action: {
-                    signInVM.signIn()
-                }, label: {
-                    Text("Sign in")
-                        .frame(width: 150, height: 50)
-                        .foregroundColor(Color(.label))
-                        .background(Color.accentColor)
-                        .cornerRadius(8)
-                })
-
-                Text(signInVM.isAuthenticated ? "Authenticated" : "Unauthenticated")
-            }
-            .padding()
-            
-            Spacer()
-            
-            Button(action: {
-                myPetsVM.getMyPets()
-            }, label: {
-                Text("Get my pets")
+                Button("Sign in") {
+                    signInVM.signIn { success in
+                        print("Success")
+                        
+                        authentication.updateStatus(next: success)
+                    }
+                }
                     .frame(width: 150, height: 50)
                     .foregroundColor(Color(.label))
                     .background(Color.accentColor)
                     .cornerRadius(8)
-            })
+            }
+            .padding()
+            
+            if (signInVM.inProgress) {
+                ProgressView()
+            }
+            
+            Spacer()
         }
+        .disabled(signInVM.inProgress)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignInView()
             .preferredColorScheme(.dark)
     }
-}
-
-struct User: Codable {
-    let username: String;
-    let password: String;
 }

@@ -71,7 +71,6 @@ class Webservice {
             }
             
             completion(.success(token))
-            
         }.resume()
     }
     

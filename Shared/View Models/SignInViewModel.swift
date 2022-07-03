@@ -8,24 +8,26 @@
 import Foundation
 
 class SignInViewModel: ObservableObject {
-    @Published var username: String = ""
-    @Published var password: String = ""
-    @Published var isAuthenticated: Bool = false
-    
-    func signIn() {
+    @Published var username: String = "joe.doe@doggo.rocks"
+    @Published var password: String = "Passw0rd!1"
+    @Published var inProgress: Bool = false
+
+    func signIn(completion: @escaping (Bool) -> Void) {
+        self.inProgress = true
         
         let defaults = UserDefaults.standard
 
         Webservice().signIn(username: username, password: password) { result in
+            self.inProgress = false
+            
             switch result {
             case .success(let accessToken):
                 print(accessToken)
                 defaults.setValue(accessToken, forKey: "accesstoken")
-                DispatchQueue.main.async {
-                    self.isAuthenticated = true
-                }
+                completion(true)
             case .failure(let error):
                 print("Error \(error.localizedDescription)")
+                completion(false)
             }
         }
     }

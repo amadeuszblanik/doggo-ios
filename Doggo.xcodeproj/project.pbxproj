@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E34067D2871104B00102855 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34067C2871104B00102855 /* SignInView.swift */; };
+		4E34067E2871104B00102855 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34067C2871104B00102855 /* SignInView.swift */; };
+		4E3406812871124500102855 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3406802871124500102855 /* Authentication.swift */; };
+		4E3406822871124500102855 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3406802871124500102855 /* Authentication.swift */; };
 		4ED31F60286D195E00F60CB3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F5F286D195E00F60CB3 /* Tests_iOS.swift */; };
 		4ED31F62286D195E00F60CB3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F61286D195E00F60CB3 /* Tests_iOSLaunchTests.swift */; };
 		4ED31F6C286D195E00F60CB3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F6B286D195E00F60CB3 /* Tests_macOS.swift */; };
@@ -43,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E34067C2871104B00102855 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		4E3406802871124500102855 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		4ED31F47286D195C00F60CB3 /* DoggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggoApp.swift; sourceTree = "<group>"; };
 		4ED31F48286D195C00F60CB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4ED31F49286D195E00F60CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E34067B2871102F00102855 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4ED31F48286D195C00F60CB3 /* ContentView.swift */,
+				4E34067C2871104B00102855 /* SignInView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4E34067F2871108F00102855 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4ED31F41286D195C00F60CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -106,10 +128,11 @@
 		4ED31F46286D195C00F60CB3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4E34067F2871108F00102855 /* Models */,
+				4E34067B2871102F00102855 /* Screens */,
 				4EEC429B286E43400073B70F /* View Models */,
 				4ED31F83286D1FB300F60CB3 /* Services */,
 				4ED31F47286D195C00F60CB3 /* DoggoApp.swift */,
-				4ED31F48286D195C00F60CB3 /* ContentView.swift */,
 				4ED31F49286D195E00F60CB3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -156,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4ED31F84286D1FCC00F60CB3 /* Webservice.swift */,
+				4E3406802871124500102855 /* Authentication.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -327,6 +351,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3406812871124500102855 /* Authentication.swift in Sources */,
+				4E34067D2871104B00102855 /* SignInView.swift in Sources */,
 				4EEC429D286E43520073B70F /* SignInViewModel.swift in Sources */,
 				4ED31F71286D195E00F60CB3 /* ContentView.swift in Sources */,
 				4ED31F85286D1FCC00F60CB3 /* Webservice.swift in Sources */,
@@ -339,6 +365,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3406822871124500102855 /* Authentication.swift in Sources */,
+				4E34067E2871104B00102855 /* SignInView.swift in Sources */,
 				4EEC429E286E43520073B70F /* SignInViewModel.swift in Sources */,
 				4ED31F72286D195E00F60CB3 /* ContentView.swift in Sources */,
 				4ED31F86286D1FCC00F60CB3 /* Webservice.swift in Sources */,
