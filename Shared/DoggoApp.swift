@@ -17,7 +17,7 @@ struct DoggoApp: App {
                 ContentView()
                     .environmentObject(authentication)
             } else {
-                SignInView()
+                NewUserView()
                     .environmentObject(authentication)
             }
         }

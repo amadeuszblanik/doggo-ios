@@ -57,6 +57,40 @@ class Webservice {
         }.resume()
     }
     
+    func signUp(email: String, firstName: String, lastName: String, password: String, passwordConfirm: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
+
+        guard let url = URL(string: "http://localhost:3000/api/auth/sign-up") else {
+            completion(.failure(.custom(errorMessage: "URL is not correct")))
+            return
+        }
+        
+        let body = SignUpRequestBody(email: email, firstName: firstName, lastName: lastName, password: password, passwordConfirm: passwordConfirm)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONEncoder().encode(body)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(.failure(.custom(errorMessage: "Missing response body")))
+                return
+            }
+            
+            guard let signUpResponse = try? JSONDecoder().decode(MessageResponse.self, from: data) else {
+                completion(.failure(.invalidCredentials))
+                return
+            }
+
+            guard let message = signUpResponse.message else {
+                completion(.failure(.invalidCredentials))
+                return
+            }
+            
+            completion(.success(message))
+        }.resume()
+    }
+    
     func myPets(token: String, completion: @escaping (Result<[PetSingle], NetworkError>) -> Void) {
         print("Webservice.myPets()")
         print("TOKEN \(token)")
