@@ -59,10 +59,13 @@ struct SignInView: View {
             if (signInVM.inProgress) {
                 ProgressView()
             }
-            
+
             Spacer()
         }
         .disabled(signInVM.inProgress)
+        .alert(item: $signInVM.error) { error in
+            Alert(title: Text("Authentication failed"), message: Text(error.localizedDescription))
+        }
     }
 }
 

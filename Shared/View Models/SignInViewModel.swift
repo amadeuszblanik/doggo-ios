@@ -11,6 +11,7 @@ class SignInViewModel: ObservableObject {
     @Published var username: String = "joe.doe@doggo.rocks"
     @Published var password: String = "Passw0rd!1"
     @Published var inProgress: Bool = false
+    @Published var error: AuthenticationError?
 
     func signIn(completion: @escaping (Bool) -> Void) {
         self.inProgress = true
@@ -26,6 +27,7 @@ class SignInViewModel: ObservableObject {
                 defaults.setValue(accessToken, forKey: "accesstoken")
                 completion(true)
             case .failure(let error):
+                self.error = error
                 print("Error \(error.localizedDescription)")
                 completion(false)
             }

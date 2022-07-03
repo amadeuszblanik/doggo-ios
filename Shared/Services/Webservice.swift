@@ -7,9 +7,22 @@
 
 import Foundation
 
-enum AuthenticationError: Error {
+enum AuthenticationError: Error, LocalizedError, Identifiable {
     case invalidCredentials
     case custom(errorMessage: String)
+    
+    var id: String {
+        self.localizedDescription
+    }
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidCredentials:
+            return NSLocalizedString("Please verify your email and password and try again", comment: "")
+        case .custom:
+            return NSLocalizedString("Something went wrong", comment: "")
+        }
+    }
 }
 
 enum NetworkError: Error {
