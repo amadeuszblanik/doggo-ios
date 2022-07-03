@@ -12,16 +12,30 @@ struct ContentView: View {
     @StateObject private var myPetsVM = MyPetsViewModel()
 
     var body: some View {
-        VStack {
-            Text("Doggo.Rocks")
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding()
-            Text("You are authenticated")
-                .font(.headline)
-                .fontWeight(.semibold)
-                .padding()
+        NavigationView {
+            VStack {
+                Image("logo")
+                    .resizable()
+                    .scaleEffect()
+                    .frame(width: 80, height: 80)
+                    .padding()
+
+                Text("Doggo.Rocks!")
+                    .font(.largeTitle)
+                    .padding()
+
+                List {
+                    NavigationLink (destination: MyPetsView(), label: {
+                        Text("My pets")
+                    })
+                }
+                
+                
+                Spacer()
+            }
         }
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

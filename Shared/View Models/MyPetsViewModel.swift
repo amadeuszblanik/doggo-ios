@@ -8,9 +8,14 @@
 import Foundation
 
 class MyPetsViewModel: ObservableObject {
-//    @Published var myPets: [PetSingle] = []
+    @Published var petsList = [PetSingle]()
+
     
-    func getMyPets() {
+    init() {
+        self.getPetsList()
+    }
+    
+    func getPetsList() {
         let defaults = UserDefaults.standard
 
         print("getMyPets()")
@@ -25,9 +30,9 @@ class MyPetsViewModel: ObservableObject {
             switch result {
                 case .success(let myPets):
                     print("Success \(myPets)")
-//                    DispatchQueue.main.async {
-//                        self.myPets = myPets
-//                    }
+                    DispatchQueue.main.async {
+                        self.petsList = myPets
+                    }
                 case .failure(let error):
                     print("Error \(error.localizedDescription)")
                 }

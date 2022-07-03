@@ -27,18 +27,6 @@ struct SignInRequestBody: Codable {
     let password: String
 }
 
-struct PetSingle: Codable {
-    let id: Int
-    let name: String
-    let kind: String
-    let breed: String
-    let microchip: String
-    let birthDate: String
-    let isActive: Bool
-    let createdAt: String
-    let updatedAt: String
-}
-
 class Webservice {
     func signIn(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
 
@@ -90,10 +78,6 @@ class Webservice {
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            print("DATA \(data)")
-            print("RESPONSE \(response)")
-            print("ERROR \(error)")
-            
             guard let data = data, error == nil else {
                 print("REQUEST_FAILED - noResponseData")
                 completion(.failure(.noResponsedata))
@@ -107,7 +91,7 @@ class Webservice {
                 return
             }
             
-            print(myPetsResponse)
+            print("SUCCESS \(myPetsResponse)")
             completion(.success(myPetsResponse))
         }.resume()
     }
