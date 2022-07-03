@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var signInVM = SignInViewModel()
-    @StateObject private var myPetsVM = MyPetsViewModel()
+    @EnvironmentObject var authentication: Authentication
 
     var body: some View {
         NavigationView {
@@ -28,6 +27,9 @@ struct ContentView: View {
                     NavigationLink (destination: MyPetsView(), label: {
                         Text("My pets")
                     })
+                    Button("Sign off") {
+                        authentication.updateStatus(next: false)
+                    }
                 }
                 
                 
@@ -44,9 +46,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .preferredColorScheme(.dark)
     }
-}
-
-struct User: Codable {
-    let username: String;
-    let password: String;
 }
