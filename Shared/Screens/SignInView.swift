@@ -18,7 +18,7 @@ struct SignInView: View {
                 .fontWeight(.semibold)
                 .padding()
             
-            Text("Sign in")
+            Text(NSLocalizedString("signin_header", comment: ""))
                 .font(.headline)
                 .fontWeight(.semibold)
                 .padding()
@@ -29,23 +29,21 @@ struct SignInView: View {
                 .frame(width: 150, height: 150)
             
             VStack {
-                TextField("Email Address", text: $signInVM.username)
+                TextField(NSLocalizedString("signin_email_placeholder", comment: ""), text: $signInVM.username)
                 .padding()
                 .foregroundColor(Color(.label))
                 .background(Color(.secondarySystemBackground))
                 .cornerRadius(8)
                 .keyboardType(.emailAddress)
             
-                SecureField("Password", text: $signInVM.password)
+                SecureField(NSLocalizedString("signin_password_placeholder", comment: ""), text: $signInVM.password)
                     .padding()
                     .foregroundColor(Color(.label))
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(8)
                 
-                Button("Sign in") {
+                Button(NSLocalizedString("signin_button", comment: "")) {
                     signInVM.signIn { success in
-                        print("Success")
-                        
                         authentication.updateStatus(next: success)
                     }
                 }
@@ -64,7 +62,7 @@ struct SignInView: View {
         }
         .disabled(signInVM.inProgress)
         .alert(item: $signInVM.error) { error in
-            Alert(title: Text("Authentication failed"), message: Text(error.localizedDescription))
+            Alert(title: Text(NSLocalizedString("signin_failed_alert_title", comment: "")), message: Text(error.localizedDescription))
         }
     }
 }

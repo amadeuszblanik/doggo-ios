@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Doggo
+
+  Created by Amadeusz Blanik on 03/07/2022.
+  
+*/
+
+"signin_header" = "Wpisz się";
+"signin_email_placeholder" = "Adres e-mail";
+"signin_password_placeholder" = "Hasło";
+"signin_button" = "Wpisz się";
+"signin_failed_alert_title" = "Wystąpił błąd";
+"authentication_error_invalid_credentials" = "Popraw adres e-mail lub hasło i spróbuj ponownie";
+"general_error_message" = "Coś poszło źle";

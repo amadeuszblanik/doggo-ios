@@ -19,6 +19,10 @@
 		4E34068B28711D4100102855 /* PetDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34068928711D4100102855 /* PetDetailsView.swift */; };
 		4E34068D2871298A00102855 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34068C2871298A00102855 /* User.swift */; };
 		4E34068E2871298A00102855 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34068C2871298A00102855 /* User.swift */; };
+		4E34069228712BBB00102855 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E34069528712BBB00102855 /* Localizable.strings */; };
+		4E34069328712BBB00102855 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E34069528712BBB00102855 /* Localizable.strings */; };
+		4E34069928712E3D00102855 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34069828712E3D00102855 /* AuthenticationError.swift */; };
+		4E34069A28712E3D00102855 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E34069828712E3D00102855 /* AuthenticationError.swift */; };
 		4ED31F60286D195E00F60CB3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F5F286D195E00F60CB3 /* Tests_iOS.swift */; };
 		4ED31F62286D195E00F60CB3 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F61286D195E00F60CB3 /* Tests_iOSLaunchTests.swift */; };
 		4ED31F6C286D195E00F60CB3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31F6B286D195E00F60CB3 /* Tests_macOS.swift */; };
@@ -61,6 +65,10 @@
 		4E34068628711C3000102855 /* PetSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSingle.swift; sourceTree = "<group>"; };
 		4E34068928711D4100102855 /* PetDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailsView.swift; sourceTree = "<group>"; };
 		4E34068C2871298A00102855 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E34069428712BBB00102855 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4E34069628712CE800102855 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4E34069728712CFE00102855 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4E34069828712E3D00102855 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		4ED31F47286D195C00F60CB3 /* DoggoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggoApp.swift; sourceTree = "<group>"; };
 		4ED31F48286D195C00F60CB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4ED31F49286D195E00F60CB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 			children = (
 				4E34068628711C3000102855 /* PetSingle.swift */,
 				4E34068C2871298A00102855 /* User.swift */,
+				4E34069828712E3D00102855 /* AuthenticationError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 		4ED31F41286D195C00F60CB3 = {
 			isa = PBXGroup;
 			children = (
+				4E34069528712BBB00102855 /* Localizable.strings */,
 				4ED31F46286D195C00F60CB3 /* Shared */,
 				4ED31F55286D195E00F60CB3 /* macOS */,
 				4ED31F5E286D195E00F60CB3 /* Tests iOS */,
@@ -315,6 +325,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-GB",
+				pl,
 			);
 			mainGroup = 4ED31F41286D195C00F60CB3;
 			productRefGroup = 4ED31F4F286D195E00F60CB3 /* Products */;
@@ -335,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F73286D195E00F60CB3 /* Assets.xcassets in Resources */,
+				4E34069228712BBB00102855 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ED31F74286D195E00F60CB3 /* Assets.xcassets in Resources */,
+				4E34069328712BBB00102855 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +391,7 @@
 				4ED31F6F286D195E00F60CB3 /* DoggoApp.swift in Sources */,
 				4E34068728711C3000102855 /* PetSingle.swift in Sources */,
 				4EEC42A3286E51E90073B70F /* MyPetsViewModel.swift in Sources */,
+				4E34069928712E3D00102855 /* AuthenticationError.swift in Sources */,
 				4E34068D2871298A00102855 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +410,7 @@
 				4ED31F70286D195E00F60CB3 /* DoggoApp.swift in Sources */,
 				4E34068828711C3000102855 /* PetSingle.swift in Sources */,
 				4EEC42A4286E51E90073B70F /* MyPetsViewModel.swift in Sources */,
+				4E34069A28712E3D00102855 /* AuthenticationError.swift in Sources */,
 				4E34068E2871298A00102855 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +448,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4E34069528712BBB00102855 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E34069428712BBB00102855 /* en */,
+				4E34069628712CE800102855 /* en-GB */,
+				4E34069728712CFE00102855 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4ED31F75286D195E00F60CB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -495,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
