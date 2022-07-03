@@ -23,16 +23,8 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .padding()
 
-                List {
-                    NavigationLink (destination: MyPetsView(), label: {
-                        Text("My pets")
-                    })
-                    Button("Sign off") {
-                        authentication.updateStatus(next: false)
-                    }
-                }
-                
-                
+                MyPetsView()
+
                 Spacer()
             }
         }

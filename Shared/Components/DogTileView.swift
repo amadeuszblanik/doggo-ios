@@ -11,6 +11,10 @@ struct DogTileView: View {
     var details: PetSingle
     
     var body: some View {
+        let colours: [Color] = [Color.purple, Color.red, Color.blue, Color.green]
+        let colourIndex: Int = randomIndex(maxValue: colours.count)
+        let colour: Color = colours[colourIndex]
+
         VStack(alignment: .leading) {
             Spacer()
             Text(details.name)
@@ -26,7 +30,7 @@ struct DogTileView: View {
         .padding()
         .frame(height: 256)
         .frame(maxWidth: .infinity, alignment: .bottomLeading)
-        .background(LinearGradient(colors: [Color.purple, Color.accentColor], startPoint: UnitPoint.bottomLeading, endPoint: UnitPoint.topTrailing))
+        .background(LinearGradient(colors: [colour, Color.accentColor], startPoint: UnitPoint.bottomLeading, endPoint: UnitPoint.topTrailing))
         .cornerRadius(6)
     }
 }
@@ -35,5 +39,6 @@ struct DogTileView_Previews: PreviewProvider {
     static var previews: some View {
         DogTileView(details: ModelData().petDetails[0])
             .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.portrait)
     }
 }

@@ -11,19 +11,13 @@ struct MyPetsView: View {
     @ObservedObject var myPetsVM = MyPetsViewModel()
 
     var body: some View {
-        NavigationView {
-            List(petsList) { pet in
-                VStack {
-                    NavigationLink(destination: PetDetailsView(details: pet)) {
-                        Text(pet.name)
-                    }
-                }
-            }
-        }
+        DogListView(petsList: myPetsVM.petsList)
     }
 }
 
 struct MyPetsView_Previews: PreviewProvider {
+    static var petDetails = Array(ModelData().petDetails.prefix(4))
+    
     static var previews: some View {
         MyPetsView()
             .preferredColorScheme(.dark)
