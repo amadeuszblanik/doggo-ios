@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4E0DFE942877831D005705D6 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE932877831D005705D6 /* ButtonComponent.swift */; };
+		4E0DFE9628778CF1005705D6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9528778CF1005705D6 /* SignUpView.swift */; };
+		4E0DFE9728778CF1005705D6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9528778CF1005705D6 /* SignUpView.swift */; };
+		4E0DFE9928779299005705D6 /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9828779299005705D6 /* InputComponent.swift */; };
+		4E0DFE9A28779299005705D6 /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9828779299005705D6 /* InputComponent.swift */; };
+		4E0DFE9C28779717005705D6 /* SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9B28779716005705D6 /* SelectComponent.swift */; };
+		4E0DFE9D28779717005705D6 /* SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DFE9B28779716005705D6 /* SelectComponent.swift */; };
 		4E34069228712BBB00102855 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E34069528712BBB00102855 /* Localizable.strings */; };
 		4E34069328712BBB00102855 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E34069528712BBB00102855 /* Localizable.strings */; };
 		4E3ED3052872341A006631E2 /* petDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3ED3042872341A006631E2 /* petDetails.json */; };
@@ -43,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		4E0DFE932877831D005705D6 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		4E0DFE9528778CF1005705D6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4E0DFE9828779299005705D6 /* InputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputComponent.swift; sourceTree = "<group>"; };
+		4E0DFE9B28779716005705D6 /* SelectComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectComponent.swift; sourceTree = "<group>"; };
 		4E34069428712BBB00102855 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E34069628712CE800102855 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4E34069728712CFE00102855 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -98,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				4E0DFE932877831D005705D6 /* ButtonComponent.swift */,
+				4E0DFE9828779299005705D6 /* InputComponent.swift */,
+				4E0DFE9B28779716005705D6 /* SelectComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4EE69DAC2877814A001153E1 /* WelcomeView.swift */,
+				4E0DFE9528778CF1005705D6 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,7 +364,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0DFE9628778CF1005705D6 /* SignUpView.swift in Sources */,
+				4E0DFE9928779299005705D6 /* InputComponent.swift in Sources */,
 				4EE69DAD2877814A001153E1 /* WelcomeView.swift in Sources */,
+				4E0DFE9C28779717005705D6 /* SelectComponent.swift in Sources */,
 				4E0DFE942877831D005705D6 /* ButtonComponent.swift in Sources */,
 				4ED31F6F286D195E00F60CB3 /* DoggoApp.swift in Sources */,
 			);
@@ -363,7 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EE69DAE2877814A001153E1 /* WelcomeView.swift in Sources */,
+				4E0DFE9728778CF1005705D6 /* SignUpView.swift in Sources */,
+				4E0DFE9A28779299005705D6 /* InputComponent.swift in Sources */,
 				4ED31F70286D195E00F60CB3 /* DoggoApp.swift in Sources */,
+				4E0DFE9D28779717005705D6 /* SelectComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

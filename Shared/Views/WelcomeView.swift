@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State var isSignUpActive = false
+
     var body: some View {
         NavigationView{
             VStack {
@@ -24,30 +26,34 @@ struct WelcomeView: View {
                     comment: "Header on welcome screen"
                 ))
                     .font(.headline)
+                    .padding(.bottom, 2)
                 
                 Text(String(
                     localized: "welcome_subheader",
                     comment: "Subheader on welcome screen"
                 ))
                     .font(.subheadline)
-                    .padding()
+                    .padding(.bottom)
                 
                 Spacer()
                 
-                ButtonComponent(text: String(
-                    localized: "sign_up",
-                    comment: "Subheader on welcome screen"
-                ), fullWidth: true, outline: true) {
-                    print("Pressed next")
+                NavigationLink(destination: SignUpView(), isActive: $isSignUpActive) {
+                    ButtonComponent(text: String(
+                        localized: "sign_up",
+                        comment: "Sign up"
+                    ), fullWidth: true, outline: true) {
+                        self.isSignUpActive = true
+                    }
                 }
                 
                 ButtonComponent(text: String(
                     localized: "sign_in",
-                    comment: "Subheader on welcome screen"
+                    comment: "Sign in"
                 ), fullWidth: true) {
                     print("Pressed next")
                 }
             }
+            .padding()
         }
         .padding()
     }

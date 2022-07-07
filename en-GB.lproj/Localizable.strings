@@ -6,10 +6,9 @@
   
 */
 
-"signin_header" = "Sign in";
-"signin_email_placeholder" = "E-mail address";
-"signin_password_placeholder" = "Password";
-"signin_button" = "Sign in";
-"signin_failed_alert_title" = "Authentication failed";
-"authentication_error_invalid_credentials" = "Please verify your email and password and try again";
-"general_error_message" = "Something went wrong";
+"welcome_header" = "Welcome hooman!";
+"welcome_subheader" = "in Doggo App";
+
+"sign_up" = "Sign up";
+"sign_in" = "Sign in";
+
